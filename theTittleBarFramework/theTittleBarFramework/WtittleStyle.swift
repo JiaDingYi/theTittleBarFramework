@@ -48,10 +48,4 @@ class WtittleStyle {
     // 设置圆角大小
     var coverRadius : CGFloat = 12
     
-    
-    
-    
-    
-    
-    
 }

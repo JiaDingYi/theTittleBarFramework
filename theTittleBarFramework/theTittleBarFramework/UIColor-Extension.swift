@@ -25,13 +25,13 @@ extension UIColor{
     
     //MARK:获取两个颜色的差值
     class func getColorsDifValue(firstColor:UIColor,secondColor:UIColor) -> (CGFloat,CGFloat,CGFloat){
-        let firstRGB = firstColor.getRGBColor(firstColor)
-        let secondRGB = secondColor.getRGBColor(secondColor)
+        let firstRGB = UIColor.getRGBColor(firstColor)
+        let secondRGB = UIColor.getRGBColor(secondColor)
         return (firstRGB.0-secondRGB.0,firstRGB.1-secondRGB.1,firstRGB.2-secondRGB.2)
     }
     
     //MARK:获取传入颜色的 RGB 值
-    private func getRGBColor(_ color:UIColor) -> (CGFloat,CGFloat,CGFloat){
+    class func getRGBColor(_ color:UIColor) -> (CGFloat,CGFloat,CGFloat){
         guard let com = color.cgColor.components else {
             fatalError("保证传入的普通颜色为 RGB 形式")
         }
